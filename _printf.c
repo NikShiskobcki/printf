@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- *
- *
- *
+ *_printf - printf function
+ *@format : character string
+ *Return: amount of characters printed
  */
 int _printf(const char *format, ...)
 {
@@ -25,6 +25,20 @@ int _printf(const char *format, ...)
   
   while (format)
     {
+      if (format[i] == '\')
+       {
+	 i++;
+	 if (format[i] == 'n')
+	  {
+	   _putchar('\n');
+	  }
+	 else
+	 {
+	  i--;
+	  _putchar(format[i]);
+	  count++;
+	 }
+       }
       if (format[i] == '%')
 	{
 	  i++;
