@@ -30,5 +30,6 @@ int print_double(va_list d);
 int print_unsigned(va_list u);
 int print_bi(va_list d);
 int print_hex(va_list h);
-int print_HEXA(va_list HEX);
+int print_HEXA(va_list hex);
+int print_octal(va_list o);
 #endif
