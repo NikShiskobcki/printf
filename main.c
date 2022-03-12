@@ -23,5 +23,7 @@ int main(void)
   _printf("Unsigned:[%u]\n", ui);
   _printf("Percent:[%%]\n");
   _printf("binary:[%b]\n", 24);
+  _printf("Unsigned hexadecimal:[%x]\n", ui);
+  _printf("Unsigned HEXadecimal:[%X]\n", ui);
   return (0);
 }
