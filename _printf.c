@@ -20,6 +20,7 @@ int _printf(const char *format, ...)
 		      {"b", print_bi},
 		      {"x", print_hex},
 		      {"X", print_HEXA},
+		      {"o", print_octal},
 		      {NULL, NULL}
   };
 		      
