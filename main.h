@@ -27,6 +27,6 @@ int print_string(va_list s);
 int print_char(va_list c);
 int print_int(va_list i);
 int print_double(va_list d);
-
+int print_unsigned(va_list u);
 
 #endif
