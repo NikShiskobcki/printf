@@ -25,5 +25,6 @@ int main(void)
   _printf("binary:[%b]\n", 24);
   _printf("Unsigned hexadecimal:[%x]\n", ui);
   _printf("Unsigned HEXadecimal:[%X]\n", ui);
+  _printf("Unsigned octal:[%o]\n", ui);
   return (0);
 }
