@@ -22,5 +22,6 @@ int main(void)
   _printf("String:[%s]\n", "I am a string !");
   _printf("Unsigned:[%u]\n", ui);
   _printf("Percent:[%%]\n");
+  _printf("binary:[%b]\n", 24);
   return (0);
 }
