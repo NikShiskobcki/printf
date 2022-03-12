@@ -6,15 +6,16 @@
 #include <stdarg.h>
 
 /**
- *
- *
- *
+ *struct format - percentages and corresponding functions
+ *@vars : percentage characters
+ *@f : function pointer
  *
  */
 typedef struct format
 {
-  char *vars;
-  int (*f)(va_list);
+	char *vars;
+	int (*f)(va_list);
+
 } print_var;
 
 
