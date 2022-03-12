@@ -1,17 +1,24 @@
 #include "main.h"
+
 /**
- *print_int - print integer function for %i
- *@i : va list for int argument
- *Return: length of integer
+ *print_double - print double function for %d
+ *@d : va list of argument of type double
+ *Return: length of double
  */
 int print_int(va_list i)
 {
-	int j;
-	char *integer = va_arg(i, char *);
+  int x = va_arg(i, int);
+  int j = 1;
 
-	for (j = 0; integer[j] != '\0'; j++)
-	{
-		_putchar(integer[j]);
-	}
-	return (j);
+
+  print_number(x);
+  if (x < 0)
+    j++;
+  while (x / 10 != 0)
+    {
+      j++;
+      x = x / 10;
+    }
+
+  return (j);
 }
