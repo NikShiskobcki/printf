@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
   print_var vars[] = {
 		      {"s", print_string},
 		      {"c", print_char},
-		      {"d", print_dec},
+		      {"d", print_double},
 		      {"i", print_int},
 		      {NULL, NULL}
   };
@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
   
   while (format)
     {
-      if (format[i] == '\')
+      if (format[i] == '\\')
        {
 	 i++;
 	 if (format[i] == 'n')

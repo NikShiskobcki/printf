@@ -6,12 +6,12 @@
  */
 int print_int(va_list i)
 {
-	int i;
-	int *integer = va_arg(i, int);
+	int j;
+	char *integer = va_arg(i, char *);
 
-	for (i = 0; integer != '\0'; i++)
+	for (j = 0; integer[j] != '\0'; j++)
 	{
-		_putchar(integer[i]);
+		_putchar(integer[j]);
 	}
-	return (i);
+	return (j);
 }
