@@ -1,5 +1,5 @@
-#ifndef main
-#define main
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdio.h>
 #include <unistd.h>
@@ -21,11 +21,11 @@ typedef struct format
 
 
 int _putchar(char c);
+int _printf(const char *format, ...);
 int print_string(va_list s);
 int print_char(va_list c);
 int print_int(va_list i);
-int print_dec(va_list d);
+int print_double(va_list d);
 
-int _printf(const char *format, ...);
 
 #endif
