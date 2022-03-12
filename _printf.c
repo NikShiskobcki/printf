@@ -23,38 +23,33 @@ int _printf(const char *format, ...)
   va_list a;
   va_start(a, format);
   
-  while (format)
+  while (format[i] != '\0')
     {
-  
       if (format[i] == '%')
 	{
 	  i++;
-	  j = 0;
-	  while (j < 3)
+	  if (format[i] == '%')
 	    {
-	      if (format[i] == *(vars[j].vars))
-		{
-		  count += vars[j].f(a);
-		  break;
-		}
-	      j++;
-	    }
-	  if (((j == 3) && (*(vars[3].vars))) != format[i])
-	    {
-	      i--;
+	      count++;
+	      _putchar('%');
 	    }
 	 
+	  for (j = 0; vars[j].vars != NULL; j++)
+	    {
+	      if (format[i] == *vars[j].vars)
+		{
+		  count = count + vars[j].f(a);
+		  
+		}
+	    }
+	  i++;
 	}
-      else
-	{
+     
+	
       _putchar(format[i]);
       count++;
-	}
-      i++;
       
-
-
-
+      i++;    
     }
   va_end(a);
   return (count);
