@@ -10,19 +10,6 @@ int _printf(const char *format, ...)
   int i = 0;
   int j;
   int count = 0;
-  
-  print_var vars[] = {
-		      {"s", print_string},
-		      {"c", print_char},
-		      {"d", print_dec},
-		      {"i", print_int},
-		      {NULL, NULL}
-  };
-		      
-
-  va_list a;
-  va_start(a, format);
-  
   while (format)
     {
       if (format[i] == '%')
@@ -31,14 +18,14 @@ int _printf(const char *format, ...)
 	  j = 0;
 	  while (j < 3)
 	    {
-	      if (format[i] == *(vars[j].vars))
+	      if (format[i] == vars[j])
 		{
-		  count += vars[j].f(a);
+		  count += f(format[i]);
 		  break;
 		}
 	      j++;
 	    }
-	  if (((j == 3) && (*(vars[3].vars))) != format[i])
+	  if (((j == 3) && (vars[3])) != format[i])
 	    {
 	      i--;
 	    }
@@ -55,7 +42,5 @@ int _printf(const char *format, ...)
 
 
     }
-  va_end(a);
-  return (count);
 
 }
