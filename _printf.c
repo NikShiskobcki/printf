@@ -25,20 +25,7 @@ int _printf(const char *format, ...)
   
   while (format)
     {
-      if (format[i] == '\\')
-       {
-	 i++;
-	 if (format[i] == 'n')
-	  {
-	   _putchar('\n');
-	  }
-	 else
-	 {
-	  i--;
-	  _putchar(format[i]);
-	  count++;
-	 }
-       }
+  
       if (format[i] == '%')
 	{
 	  i++;
