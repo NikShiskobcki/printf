@@ -24,8 +24,21 @@ void print_number_unsigned(int x)
 
 int print_unsigned(va_list u)
 {
-  int x = va_arg(u, int);
+  int x;
   int i = 1;
+
+  if (u != NULL)
+    x = va_arg(u, int);
+  if (x == NULL)
+    {
+      _putchar('(');
+      _putchar('n');
+      _putchar('u');
+      _putchar('l');
+      _putchar('l');
+      _putchar(')');
+      return(6);
+    }
 
   print_number_unsigned(x);
 
