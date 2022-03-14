@@ -19,6 +19,7 @@ int (*auxiliar(char v))(va_list)
                 {"x", print_hex},
                 {"X", print_HEXA},
                 {"o", print_octal},
+		{"r", print_string_rev};
 		{NULL, NULL}
         };
 
