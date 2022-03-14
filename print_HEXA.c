@@ -33,8 +33,9 @@ int print_HEXA(va_list x)
 {
   unsigned int y;
   int arr[8];
-  int i, j;
+  int i = 0, j = 0;
   int val;
+  int cont = 0;
   if (x != NULL)
     y = va_arg(x, unsigned int);
   else
@@ -43,16 +44,17 @@ int print_HEXA(va_list x)
   if (y == 0)
     {
       _putchar('0');
-      return (1);
+      cont++;
     }
   for (i = 0; y > 0; i++)
     {
       val = y % 16;
       arr[i] = get_value(val);
       y = y / 16;
+      cont++;
     }
-  for (j = i; j >= 0; j--)
+  for (j = i - 1; j >= 0; j--)
     _putchar(arr[j]);
 
-  return (i);
+  return (cont);
  }
