@@ -32,6 +32,7 @@ int print_hex(va_list x)
   int arr[8];
   int i = 0, j;
   int val;
+  int cont = 0;
 
   if (x != NULL)
     y = va_arg(x, unsigned int);
@@ -41,7 +42,7 @@ int print_hex(va_list x)
   if (y == 0)
     {
       _putchar('0');
-      return (1);
+      cont++;
     }
   
   for (i = 0; y > 0; i++)
@@ -49,9 +50,10 @@ int print_hex(va_list x)
       val = y % 16;
       arr[i] = get_val(val);
       y = y / 16;
+      cont++;
     }
-  for (j = i; j >= 0; j--)
+  for (j = i - 1; j >= 0; j--)
     _putchar(arr[j]);
 
-  return (i);
+  return (cont);
  }
