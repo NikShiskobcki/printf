@@ -6,15 +6,15 @@
  * @s : argument for %s
  * Return: string length
  */
-int print_string_rev(va_list sr)
+int print_string_rev(va_list r)
 {
 
   int i = 0;
   int cont = 0;
   char *str;
 
-  if (sr != NULL)
-    str = va_arg(sr, char *);
+  if (r != NULL)
+    str = va_arg(r, char *);
 
   if (str == NULL)
     {
