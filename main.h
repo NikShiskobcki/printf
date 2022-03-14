@@ -33,4 +33,5 @@ int print_bi(va_list d);
 int print_hex(va_list h);
 int print_HEXA(va_list hex);
 int print_octal(va_list o);
+int print_string_rev(va_list r);
 #endif
