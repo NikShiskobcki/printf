@@ -30,7 +30,7 @@ int print_hex(va_list x)
 {
   unsigned int y = va_arg(x, unsigned int);
   int arr[8];
-  int i, j;
+  int i = 0, j;
   int val;
   if (y == 0)
     {
