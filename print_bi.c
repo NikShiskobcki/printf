@@ -7,7 +7,7 @@
  */
 int print_bi(va_list b)
 {
-  unsigned long int x = va_arg(b, unsigned long int);
+  unsigned int x = va_arg(b, unsigned long int);
   unsigned int a[1024];
   int i = 0, j = 0, cont = 0;
 
