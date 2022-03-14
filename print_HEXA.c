@@ -31,11 +31,15 @@ int get_value(unsigned int val)
  */
 int print_HEXA(va_list x)
 {
-  unsigned int y = va_arg(x, unsigned int);
+  unsigned int y;
   int arr[8];
   int i, j;
   int val;
-  
+  if (x != NULL)
+    y = va_arg(x, unsigned int);
+  else
+    return (0);
+
   if (y == 0)
     {
       _putchar('0');

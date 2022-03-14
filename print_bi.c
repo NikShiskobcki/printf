@@ -7,9 +7,14 @@
  */
 int print_bi(va_list b)
 {
-  unsigned long int x = va_arg(b, unsigned long int);
+  unsigned long int x;
   unsigned int a[1024];
-  int i, j;
+  int i, j, cont = 0;
+
+  if (b != NULL)
+    x = va_arg(b, unsigned long int);
+  else
+    return(0);
 
   if (x == 0)
     {
@@ -22,11 +27,12 @@ int print_bi(va_list b)
     {
       a[i] = x % 2;
       x = x / 2;
+      cont++;
     }
   for (j = i; j>=0; j--)
     _putchar(a[j] + '0');
 
-  return (i);
+  return (cont);
   
   
 }
