@@ -32,7 +32,11 @@ int print_hex(va_list x)
   int arr[8];
   int i, j;
   int val;
-  
+  if (y == 0)
+    {
+      _putchar('0');
+      return (1);
+    }
   
   for (i = 0; y > 0; i++)
     {

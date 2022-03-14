@@ -10,7 +10,12 @@ int print_octal(va_list o)
   unsigned int x = va_arg(o, int);
   int oc[11];
   int i, j;
-
+  if (x == 0)
+    {
+      _putchar('0');
+      return (1);
+    }
+  
   for (i = 0; x > 0; i++)
     {
      oc[i] = x % 8;
