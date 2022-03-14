@@ -13,6 +13,8 @@ int print_octal(va_list o)
 
   if (o != NULL)
     x = va_arg(o, int);
+  else
+    return (0);
   if (x == 0)
     {
       _putchar('0');
