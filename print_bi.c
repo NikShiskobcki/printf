@@ -7,10 +7,17 @@
  */
 int print_bi(va_list b)
 {
-  unsigned int x = va_arg(b, int);
-  int a[22];
+  unsigned long int x = va_arg(b, unsigned long int);
+  unsigned int a[1024];
   int i, j;
 
+  if (x == 0)
+    {
+      _putchar('0');
+      
+      return (1);
+    }
+  
   for (i = 0; x > 0; i++)
     {
       a[i] = x % 2;
