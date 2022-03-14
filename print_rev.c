@@ -6,7 +6,7 @@
  * @s : argument for %s
  * Return: string length
  */
-int print_string_rev(va_list r)
+int print_rev(va_list r)
 {
 
   int i = 0;
