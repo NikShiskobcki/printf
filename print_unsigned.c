@@ -29,16 +29,6 @@ int print_unsigned(va_list u)
 
   if (u != NULL)
     x = va_arg(u, int);
-  if (u == NULL)
-    {
-      _putchar('(');
-      _putchar('n');
-      _putchar('u');
-      _putchar('l');
-      _putchar('l');
-      _putchar(')');
-      return(6);
-    }
 
   print_number_unsigned(x);
 
