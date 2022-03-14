@@ -82,6 +82,11 @@ If a "%" is found along the string "format" the next character is compared to a 
   _printf("%X",6786);  
   Output of function:  
   1A82  
+- "o" print a number in octal (base 8)  
+  For example:  
+  _printf("%o",2567);  
+  Output of function:  
+  5007  
 
 ## Authors: 
 * **Paulina Crespi** - [PauliCrespi](https://github.com/PauliCrespi)  
