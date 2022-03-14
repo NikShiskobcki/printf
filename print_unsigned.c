@@ -24,7 +24,7 @@ void print_number_unsigned(int x)
 
 int print_unsigned(va_list u)
 {
-  int x;
+  unsigned int x;
   int i = 1;
 
   if (u != NULL)
