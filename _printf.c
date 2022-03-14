@@ -23,40 +23,80 @@ int _printf(const char *format, ...)
 		      {"o", print_octal},
 		      {NULL, NULL}
   };
-		      
-
   va_list a;
-  va_start(a, format);
   
-  while (format[i] != '\0')
+  if (format == NULL)
+    return(-1);
+  
+  
+  va_start(a, format);
+
+  if (format[i] == '\0')
+    return(0);
+  
+    
+  while (format[i] && format)
     {
       if (format[i] == '%')
 	{
 	  i++;
+	  
+  
 	  if (format[i] == '%')
 	    {
 	      count++;
 	      _putchar('%');
+	      i++;
+	      continue;
 	    }
-	 
-	  for (j = 0; vars[j].vars != NULL; j++)
+	  if (format[i] == '\0')
+	    return(-1);
+	
+	  else
 	    {
-	      if (format[i] == *vars[j].vars)
+	      for (j = 0; vars[j].vars != NULL; j++)
 		{
-		  count = count + vars[j].f(a);
+		  if (format[i] == *vars[j].vars)
+		    {
+		      count = count + vars[j].f(a);
+		      break;
+		    }
+		}
+	      
+	        
+	    
+	  
+	    
+	      if (vars[j].vars == NULL && format[i] != '%')
+		{
+		  _putchar('%');
+		  _putchar(format[i]);
+		  count += 2;
 		  
+		}
+	      else
+		{
+		  i++;
+		  continue;
 		}
 	    }
 	  i++;
-	}
-     
+	}  
+      
+    
+      if (format[i] == '\0')
+	return(count);
+
 	
       _putchar(format[i]);
       count++;
+
+       
+      i++;
       
-      i++;    
-    }
+    
+}
   va_end(a);
   return (count);
-
+    
 }
