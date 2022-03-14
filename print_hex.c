@@ -28,11 +28,17 @@ int get_val(unsigned int val)
  */
 int print_hex(va_list x)
 {
-  unsigned int y = va_arg(x, unsigned int);
+  unsigned int y;
   int arr[8];
   int i, j;
   int val;
-  if (x == 0)
+
+  if (x != NULL)
+    y = va_arg(x, unsigned int);
+  else
+    return(0);
+
+  if (y == 0)
     {
       _putchar('0');
       return (1);
