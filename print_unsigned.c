@@ -29,7 +29,7 @@ int print_unsigned(va_list u)
 
   if (u != NULL)
     x = va_arg(u, int);
-  if (x == NULL)
+  if (u == NULL)
     {
       _putchar('(');
       _putchar('n');
