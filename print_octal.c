@@ -7,10 +7,13 @@
  */
 int print_octal(va_list o)
 {
-  unsigned int x = va_arg(o, int);
+  unsigned int x;
   int oc[11];
   int i, j;
-  if (x == 0)
+
+  if (o != NULL)
+    x = va_arg(o, int);
+  if (o == 0)
     {
       _putchar('0');
       return (1);
