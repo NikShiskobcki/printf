@@ -70,16 +70,19 @@ If a "%" is found along the string "format" the next character is compared to a 
 - "b" the unsigned int argument is converted to binary
    For example:
    _printf("%b",11);  
-   Output of function:
+   Output of function:  
    1011
-- "x" print a number in hexidecimal (base 16)
+- "x" print a number in hexadecimal (base 16)
   For example:  
-  _printf("%x", 567);  
-  Output of function:
-  237
-- "X"
+  _printf("%x",6786);  
+  Output of function:  
+  1a82  
+- "X" print a number in hexadecimal  
+  For example:  
+  _printf("%X",6786);  
+  Output of function:  
+  1A82  
 
 ## Authors: 
-Paulina Crespi  
-Nicolle Shiskobcki
-
+* **Paulina Crespi** - [PauliCrespi](https://github.com/PauliCrespi)  
+* **Nicolle Shiskobcki** - [NikShiskobcki](https://github.com/NikShiskobcki)  
