@@ -31,20 +31,20 @@ If a "%" is found along the string "format" the next character is compared to a 
 - To print a "%" the function should me written as following:  
   _printf("%%");  
   Output of function:  
-  %
+  %  
 
 - "s" is used to print a string.  
    For example:   
    _printf("%s", "Print example string");  
   Output of function:  
-  Print example string
+  Print example string  
 
 - "c" is for printing char type variables.  
    For example:  
    char exapmlechar = 'c';  
    _printf("%c", examplechar);  
    Output of function:  
-   c
+   c  
 
 - "d" is used to print decimal (base 10) numbers.   
    For example:  
@@ -53,26 +53,26 @@ If a "%" is found along the string "format" the next character is compared to a 
    156780  
    _printf("%d",-2035065302);  
    Output of function:  
-   -2035065302
+   -2035065302  
 
 - "i" is used to print integers.  
    For example:  
    _printf("%i",455);  
    Output of function:  
-   455
+   455  
 
-- "u" is used to print unsigned ints.  
+- "u" is used to print unsigned ints.   
    For example:  
-   _printf("%u", 78475843784758478);  
-   Output of function:  
-   78475843784758478
+   _printf("%u", 78475843784758478);    
+   Output of function:    
+   78475843784758478  
 
-- "b" the unsigned int argument is converted to binary
-   For example:
+- "b" the unsigned int argument is converted to binary  
+   For example:  
    _printf("%b",11);  
    Output of function:  
-   1011
-- "x" print a number in hexadecimal (base 16)
+   1011  
+- "x" print a number in hexadecimal (base 16)  
   For example:  
   _printf("%x",6786);  
   Output of function:  
