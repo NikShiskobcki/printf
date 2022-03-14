@@ -22,7 +22,7 @@ RETURN:
 
 The function returns the int amount of characters printed to the standard output stream.
 
-# HOW THE FUNCTION WORKS:
+## HOW THE FUNCTION WORKS:
 
 THE "%" CASE:
 
@@ -79,7 +79,7 @@ If a "%" is found along the string "format" the next character is compared to a 
   237
 - "X"
 
-# Authors: 
+## Authors: 
 Paulina Crespi  
 Nicolle Shiskobcki
 :
