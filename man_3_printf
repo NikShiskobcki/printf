@@ -1,0 +1,48 @@
+.\" Manpage for PRINTF.
+.TH man 8 "14 March 2022" "1.0" "Printf man page"
+.SH NAME
+Printf
+.SH SYNOPSIS
+printf("%option", ARGUMENT);
+.SH DESCRIPTION
+Print ARGUMENT(s) according to FORMAT, or excecute acoording to OPTION
+
+.SH OPTIONS
+
+%c
+
+This option is used to print a single character
+
+%s
+
+This option is used to print a character string
+
+%d
+
+This option is used to print a decimal
+
+%i
+
+This option is used to print an integer
+
+%b
+
+This option is used to print unsigned int argument converted to binary
+
+%u
+
+This option is used to print unsigned int
+
+%x
+
+This option is used to print a number in hexidecimal (base 16) with letter in lowercase
+
+%X
+
+This option is used to print a number in hexidecimal (base 16) with letter in uppercase
+
+.SH SEE ALSO
+if you do not understand or information is missing, look in man page printf
+
+
+Paulina Crespi and Nicolle Shiskobcki - Holberton School 2021 Uruguay
