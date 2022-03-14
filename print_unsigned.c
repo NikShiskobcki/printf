@@ -34,7 +34,7 @@ int print_unsigned(va_list u)
   if (x == 0)
     {
       _putchar('0');
-      return (1);
+      i++;
     }
 
   print_number_unsigned(x);
