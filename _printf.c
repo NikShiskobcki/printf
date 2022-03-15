@@ -56,14 +56,17 @@ int _printf(const char *format, ...)
 			{
 				return (-1);
 			}
-			else if (auxiliar(format[i]) != NULL)
-				count = count + (auxiliar(format[i])(a));
+			else 
+			{
+				if (auxiliar(format[i]) != NULL)
+					count = count + (auxiliar(format[i])(a));
 				if ((auxiliar(format[i]) == NULL) && (format[i] != '%'))
 				{
 					_putchar('%');
 					_putchar(format[i]);
 					count += 2;
 				}
+			}
 		i++;
 		}
 		else
