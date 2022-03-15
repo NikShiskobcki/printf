@@ -41,6 +41,11 @@ This option is used to print a number in hexidecimal (base 16) with letter in lo
 
 This option is used to print a number in hexidecimal (base 16) with letter in uppercase
 
+%o
+
+This option is used to print a number in octadecimal (base 8)
+
+
 .SH SEE ALSO
 if you do not understand or information is missing, look in man page printf
 
