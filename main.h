@@ -20,7 +20,7 @@ typedef struct format
 } print_var;
 
 
-
+int (*auxiliar(char v))(va_list);
 int _putchar(char c);
 int _printf(const char *format, ...);
 void print_number(int x);
