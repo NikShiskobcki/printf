@@ -47,7 +47,7 @@ This option is used to print a number in octadecimal (base 8)
 
 
 .SH SEE ALSO
-if you do not understand or information is missing, look in man page printf
+if you do not understand or information is missing, search for man page printf
 
 
 Paulina Crespi and Nicolle Shiskobcki - Holberton School 2021 Uruguay
