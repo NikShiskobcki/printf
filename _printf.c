@@ -60,11 +60,11 @@ int _printf(const char *format, ...)
 			else if (auxiliar(format[i]) != NULL)
 				count = count + (auxiliar(format[i])(a));
 			if ((auxiliar(format[i]) == NULL) && (format[i] != '%'))
-			  {
-			    _putchar('%');
-			    _putchar(format[i]);
-			    count += 2;
-			  }
+			{
+				_putchar('%');
+				_putchar(format[i]);
+				count += 2;
+			}
 		i++;
 		}
 		else
