@@ -39,52 +39,41 @@ int _printf(const char *format, ...)
 {
 	int i = 0, count = 0;
 	va_list a;
-  
 	if (format == NULL)
-		return(-1);
+	  return(-1);
 	va_start(a, format);
-	if (format[i] == '\0')
-		return(0);
 	while (format[i] && format)
-	{
+	  {
+	    if (format[i] == '%')
+	      {
+		i++;
 		if (format[i] == '%')
-		{
-			i++;
-			if (format[i] == '%')
-			{
-				count++;
-				_putchar('%');
-				i++;
-				continue;
-			}
-			if (format[i] == '\0')
-				return(-1);
-			else
-			{
-				if (auxiliar(format[i]) != NULL)
-				{
-						count = count + (auxiliar(format[i])(a));
-				}
-				if (auxiliar(format[i]) == NULL)
-				{
-					_putchar('%');
-					_putchar(format[i]);
-					count += 2;
-				}
-				else
-				{
-					i++;
-					continue;
-				}
-			}
-			i++;
-		}
+		  {
+		    count++;
+		    _putchar('%');
+		  }
 		if (format[i] == '\0')
-			return(count);
+		  return(-1);
+		else
+		  {
+		    if (auxiliar(format[i]) != NULL)
+		      count = count + (auxiliar(format[i])(a));
+		    if ((auxiliar(format[i]) == NULL) && (format[i] != '%'))
+		      {
+			_putchar('%');
+			_putchar(format[i]);
+			count += 2;
+		      }
+		  }
+		i++;
+	      }
+	    else
+	      {
 		_putchar(format[i]);
 		count++;
 		i++;
-	}
+	      }
+	  }
 	va_end(a);
 	return (count);
 }
