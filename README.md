@@ -93,6 +93,10 @@ If a "%" is found along the string "format" the next character is compared to a 
   Output of function:  
   OLLEH  
 
+## MANUAL  
+TO ACCESS THE FUNCTIONS MANUAL TYPE:    
+man ./man_3_printf  
+
 ## Authors: 
 * **Paulina Crespi** - [PauliCrespi](https://github.com/PauliCrespi)  
 * **Nicolle Shiskobcki** - [NikShiskobcki](https://github.com/NikShiskobcki)  
