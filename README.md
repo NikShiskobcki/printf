@@ -87,6 +87,11 @@ If a "%" is found along the string "format" the next character is compared to a 
   _printf("%o",2567);  
   Output of function:  
   5007  
+- "r" prints a string in reverse    
+  For example:  
+  _printf("r", "HELLO");  
+  Output of function:  
+  OLLEH  
 
 ## Authors: 
 * **Paulina Crespi** - [PauliCrespi](https://github.com/PauliCrespi)  
